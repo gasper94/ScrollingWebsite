@@ -110,3 +110,9 @@ h1{
     width: calc(50vw + 1vw *var(--value));
     transform: translateY(calc(50% - 1% * var(--value)));
 }
+
+
+[data-img-to-show]{
+    position: absolute;
+    top: 25%;
+}
