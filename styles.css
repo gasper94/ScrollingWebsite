@@ -3,3 +3,77 @@
 **::after {
     box-sizing: border-box;
 }
+
+body{
+
+    /* Colors */
+    --black: #141616;
+    --background-color: #e6e9ea;
+    --solid-color-section: rgb(248,250,249);
+
+    /* Gradient Colors */
+    --gradiant-color-start: rgb(152,157,157);
+    --gradiant-color-end: rgb(189,194,194);
+
+    margin: 0;
+    color: var(--black);
+    background-color: var(--background-color);
+    font-size: 28px; 
+}
+
+h1{
+    font-size: 110px;
+    margin-bottom: 1rem;
+}
+
+.full-screen-section{
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.top-section .left,
+.topsection .right {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 1rem;
+    padding-left: 3rem;
+}
+
+.top-section{
+    display: flex;
+    text-align: start;
+    padding: 0;
+}
+
+.top-section .left{
+    background-color: var(--solid-color-section);
+}
+
+.top-section .right{
+    background-color: linear-gradient(
+        210.65deg,
+        --gradiant-color-start 0%,
+        --gradiant-color-end 100%
+    );
+}
+
+/* Media Queries */
+@media(width <= 1000px){
+    .top-section .right {
+        display: none;
+    }
+
+    .top-section .left {
+        text-align: center;
+    }
+
+    body{
+        font-size: 24px;
+    }
+
+    h1{
+        font-size: 72px;
+    }
+}
