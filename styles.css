@@ -91,3 +91,21 @@ h1{
 .first-main-section{
     padding-top: 10vh;
 }
+
+.imgs > * {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    z-index: 10;
+    translate: 0 100%;
+    transition: translate 250ms ease-in-out;
+}
+
+.imgs > .show {
+    translate: 0 0;
+}
+
+.imgs > .top-section-img{
+    --value: (min(var(--scroll), 30) * 50 /30);
+    width: calc(50vw + 1vw *var(--value))
+}
