@@ -32,7 +32,6 @@ h1{
     position: relative;
 }
 
-
 .top-section .left,
 .top-section .right {
     flex-basis: 0;
@@ -48,6 +47,10 @@ h1{
 }
 
 .top-section .left{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
     background-color: rgb(248,250,249, var(--background-opacity));
 }
 
@@ -119,4 +122,19 @@ h1{
 [data-img-to-show]{
     position: absolute;
     top: 25%;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.sub-text{
+    font-size: 40px;
+    width: 820px;
 }
