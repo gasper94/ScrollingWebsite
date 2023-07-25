@@ -17,7 +17,7 @@ body{
     margin: 0;
     color: var(--black);
     background-color: var(--background-color);
-    font-size: 28px; 
+    font-size: 28px;
 }
 
 h1{
@@ -68,8 +68,16 @@ h1{
     transform: translateY(calc(50% - 1% * var(--value)));
 }
 
+/* .logo2{
+    background-color: red;
+    --value: (min(var(--scroll), 30) * 50 /30);
+    width: calc(50vw + 1vw *var(--value));
+    transform: translateY(calc(50% - 1% * var(--value)));
+} */
+
 :root{
     --scroll: 0;
+    --value: 50; /* Set initial value to 50 */
 }
 
 .top-section{
@@ -115,9 +123,19 @@ h1{
 .header{
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    background-color: pink;
+    --value: (min(var(--scroll), 30) * 50 /30);
+    width: calc(50% + 1% * var(--value));
+    /* transform: translateY(calc(50% - 1% * var(--value))); */
+
+    /* width: 50%; */
+    /* translate: 0 calc(-1% *(max(var(--scroll), 25) - 25) * 100 / 75); */
+    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+    background-color: rgb(248,250,249, var(--background-opacity));
     padding-top: 50px;
+    position: sticky; /* Add this line */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+    right: 0; /* Add this line */
 }
 
 .logo{
@@ -151,9 +169,7 @@ h1{
         margin-bottom: 5rem;
     }
 
-    .header{
-        display: flex;
-        justify-content: space-between;
+    .header {
         width: 100%;
         background-color: red;
         padding-top: 50px;

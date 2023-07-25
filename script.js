@@ -11,6 +11,13 @@ function setScrollVar() {
     "--scroll",
     Math.min(percertOfScreenHeightScrolled * 100, 100)
   );
+
+  // Testing - Get the scrollPercentage element and update its content with the scrolling percentage
+  // const scrollPercentageElement = document.getElementById("scrollPercentage");
+  // scrollPercentageElement.textContent = `Scrolling: ${Math.min(
+  //   percertOfScreenHeightScrolled * 100,
+  //   100
+  // )}%`;
 }
 
 setScrollVar();
